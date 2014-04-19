@@ -2,7 +2,11 @@
 	<div style="row">
 		<div class="col-xs-12" style="padding: 20px;">
 			{{#if isEditable}}
+<<<<<<< HEAD
 				{{>_sirakshat_editmode plainEditData}}
+=======
+				{{>_sirakshat_editmode index=-1}}
+>>>>>>> 8bf556c4300a7f046a67bd04835ffba3c8827738
 			{{/if}}
 			{{>_sirakshat_displaymode}}
 		</div>
