@@ -1,0 +1,21 @@
+<template name="_sirakshat_video">{{>provider}}</template>
+
+<template name="_sirakshat_video_edit">
+	<div class="st-block__inputs">
+		<div class="st-block__dropzone">
+			<span class="st-icon">video</span>
+			<p>
+				Enter a Youtube or Vimeo Video URL below
+			</p>
+		</div>
+		<input type="text" name="video_url" placeholder="Paste a Video URL Here" class="ak-textbox st-block__paste-input st-paste-block"></div>
+
+</template>
+
+<template name="_sirakshat_videoblock_youtube_display">
+	<iframe src="{{protocol}}//www.youtube.com/embed/{{remote_id}}" width="580" height="320" frameborder="0" allowfullscreen></iframe>
+</template>
+
+<template name="_sirakshat_videoblock_vimeo_display">
+	<iframe src="{{protocol}}//player.vimeo.com/video/{{remote_id}}?title=0&byline=0" width="580" height="320" frameborder="0"></iframe>
+</template>
