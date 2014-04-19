@@ -1,0 +1,66 @@
+<template name="sirAkshat">
+	<div style="row">
+		<div class="col-xs-12" style="padding: 20px;">
+			{{#if isEditable}}
+				{{>_sirakshat_editmode index=-1}}
+			{{/if}}
+			{{>_sirakshat_displaymode}}
+		</div>
+	</div>
+</template>
+
+<template name="_sirakshat_displaymode">
+	{{#each blocks}}
+		<div class="row" style="margin-top: 15px;"> 
+			<div class="col-xs-12"> 
+				<div class="{{isEditableCSS}}" style="padding: 20px;"> 
+					{{>blockType}}
+					{{#if isEditable}}
+					<div style="height: 2.5em"></div>
+					<div style="position: absolute; right: 0px; bottom: 0px; height: 2.5em; width: 3em; margin-right: 2.4em; margin-bottom: 1.1em;">
+						<a data-icon="bin" style="border: none;" class="st-block-ui-btn st-block-ui-btn--delete st-icon">delete</a>
+					</div>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+		{{#if isEditable}}
+			{{>_sirakshat_editmode}}
+		{{/if}}
+	{{/each}}
+</template>
+
+<template name="_sirakshat_editmode">
+	<div class="row" style="margin-top: 15px;">
+		<div class="col-xs-12">
+			<div style="width: 100%; background: #FAFAFA">
+				<div data-icon="add" class="st-block-controls__top">
+					<div class="st-block-controls">
+						<a data-type="heading" class="st-block-control">
+							<span class="st-icon">heading</span>
+							Heading
+						</a>
+						<a data-type="image" class="st-block-control">
+							<span class="st-icon">image</span>
+							Image
+						</a>
+						<a data-type="text" class="st-block-control">
+							<span class="st-icon">text</span>
+							Text
+						</a>
+						<a data-type="video" class="st-block-control">
+							<span class="st-icon">video</span>
+							Video
+						</a>
+						<a data-type="map" class="st-block-control" style="border-left: 1px solid #CCC; padding-left: 16px;">
+							<span class="st-icon" style="font-family: 'SA-Custom'">map</span>
+							Map
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="_sirakshat_empty"></template>
