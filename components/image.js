@@ -30,10 +30,9 @@ Template._sirakshat_photo_edit.events({
 			owner: Meteor.userId(),
 			scope: this.context
 		}, function(url) {
-			console.log(url);
-			// self.update({
-			// 	image_url: url
-			// });
+			self.update({
+			 	image_url: url
+			});
 		});
 	}
 });
