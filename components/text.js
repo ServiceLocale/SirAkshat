@@ -12,20 +12,36 @@ SirAkshat.registerBlockType({
 	}
 });
 
+Template._sirakshat_text.helpers({
+	text: function () {
+		return this.text || "";
+	}
+});
+
+Template._sirakshat_heading.helpers({
+	text: function () {
+		return this.text || "";
+	}
+});
+
 Template._sirakshat_text.events({
-	'blur .st-text-block': function (e) {
+	'blur .st-text-block': function (e,tmpl) {
 		if(!this.isEditable) return;
+		var text = e.currentTarget.innerHTML;
+		$(tmpl.find('.st-text-block')).html(text);
 		this.update({
-			text: e.currentTarget.innerHTML
+			text: text
 		});
 	}
 });
 
 Template._sirakshat_heading.events({
-	'blur .st-text-block': function (e) {
+	'blur .st-text-block': function (e,tmpl) {
 		if(!this.isEditable) return;
+		var text = e.currentTarget.innerHTML;
+		$(tmpl.find('.st-text-block')).html(text);
 		this.update({
-			text: e.currentTarget.innerHTML
+			text: text
 		});
 	}
 });
