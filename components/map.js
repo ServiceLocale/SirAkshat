@@ -14,7 +14,7 @@ Template._sirakshat_map.rendered = function () {
 	var mapstyle = SirAkshat.getOptionValue('mapstyle');
 
 	var mapOptions = {
-		center: new google.maps.LatLng(this.data.lat || -34.397, this.data.lng || 150.644),
+		center: new google.maps.LatLng(this.data.lat || -37.8136, this.data.lng || 144.9631),
 		zoom: 13,
 		styles: mapstyle
 	};
