@@ -7,7 +7,7 @@ SirAkshat.registerBlockType({
 	type: 'video',
 	template: function(data) {
 		if(data.provider == null || data.remote_id == null) {
-			if(!data.isEditable) return null;
+			if(!data.isEditable) return 'video_empty';
 			return '_sirakshat_video_edit';
 		}else{
 			return '_sirakshat_video';
