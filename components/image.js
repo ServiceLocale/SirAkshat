@@ -22,14 +22,19 @@ Template._sirakshat_photo_edit.events({
 		var self = this;
 		var file = e.target.files[0];
 		if(!file) {
+			tmpl.find(".st-upload-btn").removeAttr("disabled").text("Select a file");
 			console.log("No file selected");
 			return;
 		}
+
+		tmpl.find(".st-upload-btn").attr("disabled", "disabled").text("Uploading...");
 
 		SirAkshat.uploadImageGetUrl(file, {
 			owner: Meteor.userId(),
 			scope: this.context
 		}, function(url) {
+			tmpl.find(".st-upload-btn").removeAttr("disabled").text("Select a file");
+			
 			self.update({
 			 	image_url: url
 			});
