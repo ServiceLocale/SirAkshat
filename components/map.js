@@ -15,11 +15,19 @@ Template._sirakshat_map.rendered = function () {
 
 	var mapOptions = {
 		center: new google.maps.LatLng(this.data.lat || -37.8136, this.data.lng || 144.9631),
-		zoom: 13,
+		zoom: this.data.zoom || 13,
 		styles: mapstyle
 	};
 
 	var map = new google.maps.Map(this.find('.map-canvas'), mapOptions);
+
+	google.maps.event.addListener(map, 'zoom_changed', function() {
+	    if(!this.data.isEditable) return;
+	    zoomLevel = map.getZoom();
+	    self.data.update({
+			zoom: zoomLevel
+		});
+	});
 
 	var iCircle;
 
@@ -29,6 +37,7 @@ Template._sirakshat_map.rendered = function () {
 		radius: this.data.radius || 5000,
 		editable: this.data.isEditable,
 		draggable: true,
+		scrollwheel: false,
 		stroke_weight: 5,
 		posChangeCallback: function(coords) {
 			self.data.update({
