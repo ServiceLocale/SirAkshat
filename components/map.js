@@ -23,7 +23,7 @@ Template._sirakshat_map.rendered = function () {
 	var map = new google.maps.Map(this.find('.map-canvas'), mapOptions);
 
 	google.maps.event.addListener(map, 'zoom_changed', function() {
-	    if(!this.data.isEditable) return;
+	    if(!self.data.isEditable) return;
 	    zoomLevel = map.getZoom();
 	    self.data.update({
 			zoom: zoomLevel
