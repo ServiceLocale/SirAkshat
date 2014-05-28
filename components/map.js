@@ -17,7 +17,8 @@ Template._sirakshat_map.rendered = function () {
 		center: new google.maps.LatLng(this.data.lat || -37.8136, this.data.lng || 144.9631),
 		zoom: this.data.zoom || 13,
 		styles: mapstyle,
-		scrollwheel: false
+		scrollwheel: false,
+		streetViewControl: false
 	};
 
 	var map = new google.maps.Map(this.find('.map-canvas'), mapOptions);
