@@ -27,7 +27,7 @@ Template._sirakshat_heading.helpers({
 Template._sirakshat_text.events({
 	'blur .st-text-block': function (e,tmpl) {
 		if(!this.isEditable) return;
-		var text = e.currentTarget.innerHTML;
+		var text = $(e.currentTarget).text();
 		$(tmpl.find('.st-text-block')).html(text);
 		this.update({
 			text: text
@@ -38,7 +38,7 @@ Template._sirakshat_text.events({
 Template._sirakshat_heading.events({
 	'blur .st-text-block': function (e,tmpl) {
 		if(!this.isEditable) return;
-		var text = e.currentTarget.innerHTML;
+		var text = $(e.currentTarget).text();
 		$(tmpl.find('.st-text-block')).html(text);
 		this.update({
 			text: text
