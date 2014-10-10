@@ -1,8 +1,13 @@
 Package.describe({
-  summary: "Like Sir Trevor, but with 2 way reactive databinding"
+  summary: "Like Sir Trevor, but with 2 way reactive databinding",
+  version: "0.2.3",
+  git: "https://github.com/ServiceLocale/SirAkshat.git"
 });
 
 Package.on_use(function (api) {
+	
+	Meteor.versionsForm("METEOR@0.9.2")
+	
 	api.use(['deps', 'underscore', 'templating', 'session'], 'client');
     
 	var path = Npm.require('path');
