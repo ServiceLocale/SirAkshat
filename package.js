@@ -7,7 +7,7 @@ Package.describe({
 
 Package.on_use(function (api) {
 	
-	api.versionsForm("METEOR@0.9.2")
+	api.versionsFrom("METEOR@0.9.2")
 	
 	api.use(['deps', 'underscore', 'templating', 'session'], 'client');
     
