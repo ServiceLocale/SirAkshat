@@ -14,7 +14,7 @@ SirAkshat.registerBlockType({
 
 Template._sirakshat_text.helpers({
 	text: function () {
-		return this.text || "";
+		return this.text || "Enter some text here";
 	}
 });
 
