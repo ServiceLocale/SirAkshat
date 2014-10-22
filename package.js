@@ -7,9 +7,9 @@ Package.describe({
 
 Package.on_use(function (api) {
 	
-	api.versionsFrom("METEOR@0.9.2")
+	api.versionsFrom("METEOR@0.9.4")
 	
-	api.use(['deps', 'underscore', 'templating', 'session'], 'client');
+	api.use(['tracker', 'underscore', 'templating', 'session'], 'client');
     
 	var path = Npm.require('path');
 
