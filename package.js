@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Like Sir Trevor, but with 2 way reactive databinding",
-  version: "0.2.4",
+  version: "0.2.5",
   git: "https://github.com/ServiceLocale/SirAkshat.git",
   name :"servicelocale:sirakshat"
 });
