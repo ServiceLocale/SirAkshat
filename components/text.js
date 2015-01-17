@@ -20,7 +20,7 @@ Template._sirakshat_text.helpers({
 
 Template._sirakshat_heading.helpers({
 	text: function () {
-		return this.text || "";
+		return this.text || "Enter some text here";
 	}
 });
 
